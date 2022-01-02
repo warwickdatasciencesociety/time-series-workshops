@@ -1,1 +1,1 @@
-# time-series-workshop
+# Time Series workshops for WDSS
