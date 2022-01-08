@@ -8,6 +8,13 @@ from statsmodels.tsa.arima_process import arma_generate_sample
 import seaborn as sns
 import pandas as pd
 
+def revert_diff(diff_values, start_values, period):
+    x = np.r_[start_values, diff_values]
+    for t in range(period, len(diff_values) + period):
+        x[t] = sum(diff_values[np.arange(t % period, t, period)]) + \
+             start_values[t % period]
+    return x
+
 # Example Time Series - weekly sales
 y = np.zeros(52)
 for i in range(1, 52):
