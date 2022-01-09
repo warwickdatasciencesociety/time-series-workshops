@@ -1,11 +1,5 @@
-#%%
 import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib as mpl
 from scipy.stats import norm
-import statsmodels.api as sm
-from statsmodels.tsa.arima_process import arma_generate_sample
-import seaborn as sns
 import pandas as pd
 
 def revert_diff(diff_values, start_values, period):

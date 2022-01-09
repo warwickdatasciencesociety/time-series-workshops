@@ -18,5 +18,4 @@ env.bak/
 venv.bak/
 
 # images and data
-data/*
 img/*
